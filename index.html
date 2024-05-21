@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class="fa-sharp fa-solid fa-bars" id="menu-icon"></i>
+   
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Bok,</h3>
+            <h3>Ja sam Kresimir Ramljak i ja sam<span class="multiple-text"> Fullstack Developer </span></h3> 
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/ramljakkresimir"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="../Krešimir Ramljak - CV.pdf" class="btn" >Pogledaj CV</a>
+
+             </div>
+        <div class="home-img">
+                <img src="./images/profilna4.png" alt="">
+        </div>
+
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>Me</span></h2>
+            <h3>Fullstack Developer</h3>
+            
+            <p>Ja sam Krešimir Ramljak, student druge godine preddiplomskog stručnog studija računarstva na 
+                Fakultetu elektrotehnike, računarstva i informacijskih tehnologija u Osijeku. Dok radim na zadacima, 
+                volim slušati glazbu jer potiče moju kreativnost i motivaciju.</br> Svojim zadacima pristupam odgovorno i pokušavam ih dovršiti u najkraćem mogućem roku.
+            Za sebe mogu reći da sam osoba spremna za učenje i stjecanje novih iskustava. 
+            Također volim učiti o novim tehnologijama i biti ukorak s vremenom. Trenutno sam angažiran na
+            razvoju web aplikacija koristeći tehnologije kao što su Java Script, React, Node.js, HTML, CSS, kao i PostgreSQL.</p>
+            <!-- <a href="#" class="btn">Read more</a>-->
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+             <img src="./images/drum.png">
+                <div class="portfolio-layer">
+                <h4>Drum Kit</h4>
+                <p>Web aplikacija "Drum Kit" je interaktivni alat koji korisnicima omogućuje sviranje različitih zvukova bubnjeva pomoću tipkovnice.</p>
+                <a href="https://github.com/ramljakkresimir/DrumKit"><i class="fa-solid fa-up-right-from-square"></i></a>
+             </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images/simon.png">
+                   <div class="portfolio-layer">
+                   <h4>Simon Game</h4>
+                   <p>Interaktivna igra Simon Game napisana pomoću HTML, CSS, JavaScript </p>
+                   <a href="https://github.com/ramljakkresimir/Simon-Game"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+               </div>
+
+               <div class="portfolio-box">
+                <img src="./images/quiz.png">
+                   <div class="portfolio-layer">
+                   <h4>World Quiz</h4>
+                   <p>Quiz aplikacija u kojoj su korištene tehnologije kao što su Node.js, CSS, Express, PostgreSQL</p>
+                   
+                </div>
+               </div>
+
+               <div class="portfolio-box">
+                <img src="./images/shop.png">
+                   <div class="portfolio-layer">
+                   <h4>Shop</h4>
+                   <p>Shopping cart koji omogućava dodavanje i brisanje proizvoda</p>
+                   <a href="https://github.com/ramljakkresimir/Shopping-Cart"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+               </div>
+
+               <div class="portfolio-box">
+                <img src="./images/slika5.jpg">
+                   <div class="portfolio-layer">
+                   <h4>Web Design</h4>
+                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque assumenda harum natus commodi asperiores necessitatibus, quasi suscipit inventore officiis nesciunt blanditiis impedit nam est! Alias.</p>
+                   <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+               </div>
+
+               <div class="portfolio-box">
+                <img src="./images/slika6.jpg">
+                   <div class="portfolio-layer">
+                   <h4>Web Design</h4>
+                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque assumenda harum natus commodi asperiores necessitatibus, quasi suscipit inventore officiis nesciunt blanditiis impedit nam est! Alias.</p>
+                   <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+               </div>
+ 
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; <span id="year"> </span> by Krešimir Ramljak</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
