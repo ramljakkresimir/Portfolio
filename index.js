@@ -2,7 +2,7 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 
-menuIcon.onClick = () => {
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('fa-xmark');
     navbar.classList.toggle('active');
 }
@@ -13,7 +13,7 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top= window.scrollY;
-        let offset = window.screenTop -150;
+        let offset = sec.screenTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
@@ -45,3 +45,17 @@ ScrollReveal().reveal('.home-content, .about-contect', { origin:'right'});
 var date = new Date().getFullYear();
 
 document.getElementById("year").innerHTML = date;
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const serviceID = 'service_ob03k7h';
+    const templateID = 'template_bx6yfhl';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            alert('Message sent successfully!');
+        }, (err) => {
+            alert(JSON.stringify(err));
+        });
+});
