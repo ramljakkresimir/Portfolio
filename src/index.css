@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm off-white ground, warm near-black ink, hairline grays. */
+    --color-bg: 251 250 248; /* #FBFAF8 */
+    --color-surface: 255 255 255; /* #FFFFFF */
+    --color-fg: 23 22 20; /* #171614 */
+    --color-muted: 107 104 98; /* #6B6862 */
+    --color-line: 230 226 219; /* #E6E2DB */
+    /* Single restrained accent — used only on links, hover and focus. */
+    --color-accent: 180 72 31; /* #B4481F */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgb(var(--color-fg));
+    color: rgb(var(--color-bg));
+  }
+
+  /* Consistent, visible focus treatment across the whole site. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-accent));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-medium tracking-tighter2;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .u-container {
+    @apply mx-auto w-full max-w-container px-6 md:px-10 lg:px-16;
+  }
+
+  .u-label {
+    @apply font-mono text-xs uppercase tracking-label text-muted;
+  }
+
+  /* Faint vertical hairline columns — hero background only. */
+  .u-grid-lines {
+    background-image: repeating-linear-gradient(
+      to right,
+      rgb(var(--color-fg) / 0.04) 0,
+      rgb(var(--color-fg) / 0.04) 1px,
+      transparent 1px,
+      transparent max(6.25%, 96px)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
